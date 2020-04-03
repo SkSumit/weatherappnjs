@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e)=>{
 
     document.getElementById('message-1i').style.display = "inline";
     document.getElementById('message-2i').style.display = "inline";
-    fetch('http://localhost:3000/weather?search='+location).then((response) => {
+    fetch('/weather?search='+location).then((response) => {
         response.json().then((data)=>{
             if (data.error) {
                 msg1.textContent=data.error
